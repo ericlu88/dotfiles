@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+## exports - environment variables configuration
+
+## set path to dotfiles and local overrides
+DOTFILES=${DOTFILES:-~/.dotfiles}
+DOTFILES_LOCAL=${DOTFILES_LOCAL:-"$DOTFILES"/local}
+
+## set editor to vim
+export EDITOR='vim'
+export VISUAL="$EDITOR"
+
+## ignore binary files
+export GREP_OPTIONS='-I --color=auto'
+
+## don't clear screen after paging (this goes for `man` too)
+export PAGER='less -X'
+
+## source local override file if one exists
+[ -r "$DOTFILES_LOCAL"/exports ] && . "$DOTFILES_LOCAL"/exports

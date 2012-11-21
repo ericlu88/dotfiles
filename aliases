@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+## aliases - useful shortcuts
+
+## set path to dotfiles and local overrides
+DOTFILES=${DOTFILES:-~/.dotfiles}
+DOTFILES_LOCAL=${DOTFILES_LOCAL:-"$DOTFILES"/local}
+
+## navigation
+alias -- -='cd -'
+
+## shortcuts
+alias h='history'
+alias j='jobs'
+alias v='vim'
+
+## ls color flag detection
+if command ls --color &> /dev/null; then
+    ## GNU `ls`
+    COLORFLAG='--color=auto'
+else
+    ## OS X `ls`
+    COLORFLAG='-G'
+fi
+
+## ls shortcuts
+alias ls="command ls ${COLORFLAG}"
+alias l='ls -l'
+alias la='ls -la'
+alias lsd='ls -l | grep --color=never "^d"'
+
+## source local override file if one exists
+[ -r "$DOTFILES_LOCAL"/aliases ] && . "$DOTFILES_LOCAL"/aliases
+
+## clean up
+unset COLORFLAG

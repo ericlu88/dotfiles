@@ -1,0 +1,83 @@
+!! .Xresources - X11 color and terminal configuration
+
+!!!!!!!!!!!!
+!! colors !!
+!!!!!!!!!!!!
+
+!! Solarized Dark Theme
+*background:             #002b36
+*foreground:             #839496
+*cursorColor:            #93a1a1
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
+*fadeColor:              #002b36
+*fading:                 15
+
+!! black dark/light
+*color0:                 #073642
+*color8:                 #002b36
+
+!! red dark/light
+*color1:                 #dc322f
+*color9:                 #cb4b16
+
+!! green dark/light
+*color2:                 #859900
+*color10:                #586e75
+
+!! yellow dark/light
+*color3:                 #b58900
+*color11:                #657b83
+
+!! blue dark/light
+*color4:                 #268bd2
+*color12:                #839496
+
+!! magenta dark/light
+*color5:                 #d33682
+*color13:                #6c71c4
+
+!! cyan dark/light
+*color6:                 #2aa198
+*color14:                #93a1a1
+
+!! white dark/light
+*color7:                 #eee8d5
+*color15:                #fdf6e3
+
+!! saven up to 2000 lines of scrollback
+*saveLines:              2000
+
+!!!!!!!!!!!
+!! urxvt !!
+!!!!!!!!!!!
+
+!! explicitely set the term name
+URxvt*termName:          rxvt-unicode
+
+!! enable scroll bar
+URxvt*scrollBar:         true
+
+!! set the scroll bar to the right
+URxvt*scrollBar_right:   true
+
+!! nice plain and simple scroll bar
+URxvt*scrollstyle:       plain
+
+!! don't scroll to bottom when tty receives output
+URxvt*scrollTtyOutput:   false
+
+!! don't scroll with the buffer when looking back at previous output
+URxvt*scrollWithBuffer:  true
+
+!! scroll to bottom on key press
+URxvt*scrollTtyKeypress: true
+
+!! blink the cursor when idle
+URxvt*cursorBlink:       true
+
+!! enable secondary screen scroll
+URxvt*secondaryScreen:   true
+
+!! scrolls on secondary screen will change scrollback buffer
+URxvt*secondaryScroll:   true
