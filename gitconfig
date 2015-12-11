@@ -2,13 +2,15 @@
 	## overrides
 	grep = grep -I
 	## two-letter shortcuts
-	br = branch
+	br = branch -avv
 	ci = commit
 	co = checkout
 	dc = diff --cached
-	st = status -sb
+	st = status
 	## log shortcuts
-	lgd = log --oneline --graph --decorate
+	lg = log --oneline --graph --decorate
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]"
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --numstat --decorate
 [color "status"]
 	added = yellow
 	changed = green
