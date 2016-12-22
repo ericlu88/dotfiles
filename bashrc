@@ -34,6 +34,14 @@ export HISTIGNORE="ls:cd:cd -:[bf]g:pwd:exit:clear"
 ## always append history to history file after each command
 export PROMPT_COMMAND='history -a'
 
+## NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+## GO
+export GOPATH=$HOME/Documents/GO
+export PATH=${PATH}:${GOPATH}/bin
+
 ###############################
 ## bash >= 3.x shell options ##
 ###############################

@@ -11,6 +11,8 @@
 	lg = log --oneline --graph --decorate
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]"
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --numstat --decorate
+	## remote shortcuts
+	ru = remote update
 [color "status"]
 	added = yellow
 	changed = green
@@ -36,3 +38,10 @@
 [include]
 	## source local override file if one exists
 	path = ~/.dotfiles/local/gitconfig
+[credential]
+	helper = osxkeychain
+[user]
+	name = Eric Lu
+	email = ericlv88@gmail.com
+[url "https://"]
+	insteadOf = git://

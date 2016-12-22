@@ -18,7 +18,7 @@ function .. {
 }
 
 ## jump around with `go <directory name>`
-function go {
+function godir {
     local dir="$1"
     [[ -z "$dir" ]] && return
 
