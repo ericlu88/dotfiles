@@ -25,7 +25,7 @@ fi
 ## ls shortcuts
 alias ls="command ls ${COLORFLAG}"
 alias l='ls -l'
-alias la='ls -la'
+alias la='ls -laht'
 alias lsd='ls -l | grep --color=never "^d"'
 
 ## source local override file if one exists
