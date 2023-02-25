@@ -45,3 +45,5 @@
 	email = ericlv88@gmail.com
 [url "https://"]
 	insteadOf = git://
+[init]
+	defaultBranch = main
