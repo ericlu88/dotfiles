@@ -13,6 +13,8 @@
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --numstat --decorate
 	## remote shortcuts
 	ru = remote update
+	fp = fetch --prune
+	sync = !git fetch --all --prune --prune-tags --force && git pull
 [color "status"]
 	added = yellow
 	changed = green
@@ -42,8 +44,13 @@
 	helper = osxkeychain
 [user]
 	name = Eric Lu
-	email = ericlv88@gmail.com
+	email = ericlu88@users.noreply.github.com
 [url "https://"]
 	insteadOf = git://
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
